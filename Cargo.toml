@@ -1,0 +1,18 @@
+[package]
+name = "razer-headset"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.100.0"
+description = "Command-line control for the Razer BlackShark V2 HyperSpeed headset on Linux"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/aamirsahmad/razer-headset"
+readme = "README.md"
+keywords = ["razer", "headset", "hid", "linux", "cli"]
+categories = ["command-line-utilities", "hardware-support"]
+
+[dependencies]
+clap = { version = "4.6.7", features = ["derive"] }
+hidapi = "2.6"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+zbus = { version = "5.19.0", default-features = false, features = ["blocking-api", "tokio"] }

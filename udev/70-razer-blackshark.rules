@@ -1,0 +1,6 @@
+# Razer BlackShark V2 HyperSpeed: let the logged-in user talk to the dongle's
+# vendor HID channel (battery, auto power-off, ...) and read its media buttons.
+# Install: sudo cp udev/70-razer-blackshark.rules /etc/udev/rules.d/ && sudo udevadm control --reload && sudo udevadm trigger
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0565", TAG+="uaccess"
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="056e", TAG+="uaccess"
+SUBSYSTEM=="input", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0565", TAG+="uaccess"
