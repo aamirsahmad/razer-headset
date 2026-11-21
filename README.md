@@ -31,17 +31,17 @@ that as an error rather than pretending it worked.
 
 ## Setup
 
-### 1. Build / install
+### 1. Install
 
 Requires Rust (1.100.0+), a C compiler, and `libudev` development headers
 (`libudev-dev` + `pkg-config` on Debian/Ubuntu, `systemd-devel` on Fedora,
 `systemd-libs` on Arch).
 
 ```sh
-cargo install --path .
+cargo install razer-headset
 ```
 
-Or build without installing:
+Or build from source:
 
 ```sh
 cargo build --release
